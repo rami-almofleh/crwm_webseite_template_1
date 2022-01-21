@@ -3,6 +3,44 @@
  */
 :root {
     scroll-behavior: smooth;
+    --bs-blue: #5969f3;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #3f3697;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+.btn-primary {
+    transition: 0.5s;
+    color: #fff;
+    background: var(--bs-primary);
+}
+.btn-primary:hover {
+    background: var(--bs-blue);
 }
 
 body {
@@ -125,6 +163,12 @@ section {
     background-size: cover;*/
 }
 
+.hero-underside {
+    margin-top: 80px;
+    background: linear-gradient(150deg, #012970 0%, #5969F3 100%);
+    color: white;
+}
+
 .hero h1 {
     font-size: 48px;
     font-weight: 700;
@@ -184,7 +228,7 @@ section {
 @media (max-width: 991px) {
     .hero {
         height: auto;
-        padding: 120px 0 60px 0;
+        margin: 120px 0 60px 0;
     }
     .hero .hero-img {
         text-align: center;
@@ -719,3 +763,85 @@ section {
     padding-top: 30px;
     color: #012970;
 }
+
+/**
+    Accordions
+**/
+.accordion .accordion-button::after {
+    content: "+";
+    background-image: unset;
+}
+.accordion .accordion-button:not(.collapsed)::after {
+    content: "-";
+    background-image: unset;
+    transform: unset;
+}
+.accordion .accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.gradient-accordion .accordion-button {
+    background: linear-gradient(150deg, #dadada 0%, #efefef 100%);
+}
+.gradient-accordion  .accordion-item {
+    margin-bottom: 1rem;
+    border: none;
+}
+.gradient-accordion .accordion-button:not(.collapsed) {
+    color: white;
+    background: linear-gradient(150deg, #012970 0%, #5969F3 100%);
+}
+
+.dark-accordion  .accordion-item {
+    margin-bottom: 1rem;
+    border: none;
+}
+
+.primary-color-accordion  .accordion-item {
+    margin-bottom: 1rem;
+    border: none;
+}
+
+/**
+    Accordions
+**/
+
+
+/**
+    Action Box
+**/
+.action-box .action-box-button--container {
+    width: max-content;
+}
+.action-box.action-box-gradient {
+    background: linear-gradient(150deg, #012970 0%, #5969F3 100%);
+}
+.action-box button{
+    width: max-content;
+}
+
+.action-box-background-image {
+    background: url("../img/mapbox-6ml55lp0E_E-unsplash.jpg") center no-repeat;
+    background-size: cover;
+}
+.action-box-background-image:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1;
+}
+.action-box-background-image div {
+    z-index: 2;
+}
+
+.action-box-light-border {
+    border: 1px solid #dddddd;
+}
+/**
+    Action Box
+**/
